@@ -5,6 +5,7 @@
 <p align="center">
   <a href="https://use.observer"><img src="https://img.shields.io/badge/Website-use.observer-1f6feb?style=for-the-badge" alt="Website"></a>
   <a href="https://docs.use.observer"><img src="https://img.shields.io/badge/Documentation-link-blue?style=for-the-badge" alt="Documentation"></a>
+  <a href="https://status.use.observer"><img src="https://status.use.observer/badge.svg?style=for-the-badge" alt="Live status"></a>
 </p>
 
 # Observer
@@ -74,6 +75,7 @@ Two properties shape the design:
 | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [**agent**](https://github.com/useobserver/agent) | The data plane. Probes every source above, evaluates each threshold locally, and pushes verdicts over a single outbound HTTPS connection. Apache-2.0.                                                    |
 | [**cli**](https://github.com/useobserver/cli)     | Configuration as code. A dependency-free client over the Observer public API: plan changes on pull requests, apply on merge, export current state to bootstrap a repository. Ships a GitHub Action. ISC. |
+| [**demo**](https://github.com/useobserver/demo)   | A self-contained compose stack that exercises every probe source against real local services: one `docker compose up`, one `observer apply`, sixteen live metrics. The fastest way to see Observer working end to end. |
 
 ## Get started
 
@@ -81,6 +83,9 @@ Two properties shape the design:
 2. Install the [agent](https://github.com/useobserver/agent) next to your signals
    and connect it with the key from the Agents page.
 3. Define your first check, then publish a status page.
+
+Want to see it running first? The [demo stack](https://github.com/useobserver/demo)
+brings up every probe source locally with one compose file.
 
 Full walkthroughs live in the [documentation](https://docs.use.observer). Prefer
 config as code? Start with the [CLI](https://github.com/useobserver/cli) and
@@ -92,3 +97,5 @@ commit an `observer.yaml`.
 - Documentation: [docs.use.observer](https://docs.use.observer)
 - Agent: [github.com/useobserver/agent](https://github.com/useobserver/agent)
 - CLI: [github.com/useobserver/cli](https://github.com/useobserver/cli)
+- Demo: [github.com/useobserver/demo](https://github.com/useobserver/demo)
+- Live status: [status.use.observer](https://status.use.observer)
