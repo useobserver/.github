@@ -76,6 +76,7 @@ Two properties shape the design:
 | [**agent**](https://github.com/useobserver/agent) | The data plane. Probes every source above, evaluates each threshold locally, and pushes verdicts over a single outbound HTTPS connection. Apache-2.0.                                                    |
 | [**cli**](https://github.com/useobserver/cli)     | Configuration as code. A dependency-free client over the Observer public API: plan changes on pull requests, apply on merge, export current state to bootstrap a repository. Ships a GitHub Action. ISC. |
 | [**demo**](https://github.com/useobserver/demo)   | A self-contained compose stack that exercises every probe source against real local services: one `docker compose up`, one `observer apply`, sixteen live metrics. The fastest way to see Observer working end to end. |
+| [**skills**](https://github.com/useobserver/skills) | Agent skills and MCP setup: teach Claude, Cursor, or any MCP client to read your metrics and run your status page. |
 
 ## Get started
 
@@ -98,4 +99,5 @@ commit an `observer.yaml`.
 - Agent: [github.com/useobserver/agent](https://github.com/useobserver/agent)
 - CLI: [github.com/useobserver/cli](https://github.com/useobserver/cli)
 - Demo: [github.com/useobserver/demo](https://github.com/useobserver/demo)
+- Skills: [github.com/useobserver/skills](https://github.com/useobserver/skills)
 - Live status: [status.use.observer](https://status.use.observer)
