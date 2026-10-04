@@ -24,6 +24,9 @@ strict thresholds and produces one status.
 
 - **Metrics.** Prometheus, OpenTelemetry (OTLP), CloudWatch, and direct active
   probes: HTTP, TCP, DNS, TLS certificate expiry, gRPC, WebSocket, ICMP, host.
+  ICMP needs the standalone agent binary or a custom image, because the
+  published container image does not include `ping`
+  ([ICMP probes](https://docs.use.observer/agent/guides/icmp-probes)).
 - **Logs.** Turn log volume and patterns into status with Loki and
   Elasticsearch aggregations.
 - **Databases.** Probe Postgres, MySQL, Redis, and MongoDB directly with a
@@ -49,7 +52,7 @@ Two properties shape the design:
 
 - **Your telemetry stays yours.** The [agent](https://github.com/useobserver/agent)
   runs inside your network, evaluates each check locally, and pushes only the
-  result (`metric_id`, `value`, `status`, `timestamp`). Query results,
+  result (`metric_id`, `value`, `status`, `timestamp`). Raw query results,
   credentials, and connection strings never leave your network.
 - **Your configuration lives in version control.** The
   [CLI](https://github.com/useobserver/cli) applies a single `observer.yaml`
@@ -101,3 +104,4 @@ commit an `observer.yaml`.
 - Demo: [github.com/useobserver/demo](https://github.com/useobserver/demo)
 - Skills: [github.com/useobserver/skills](https://github.com/useobserver/skills)
 - Live status: [status.use.observer](https://status.use.observer)
+- Security: report vulnerabilities privately to security@use.observer
